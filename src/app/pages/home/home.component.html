@@ -1,12 +1,37 @@
 <app-navbar></app-navbar>
 
-<div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6 mt-6">
-  <div class="lg:col-span-3">
-    <app-noticias></app-noticias>
-  </div>
-  <div>
-    <app-sidebar></app-sidebar>
-  </div>
-</div>
+<main class="p-6">
+  <!-- Banner: lo que esta en grande color meado -->
+  <section class="relative bg-yellow-100 h-72 flex flex-col items-center justify-center text-center shadow-lg">
+    <h2 class="text-4xl md:text-5xl font-bold text-blue-900">imagen con algo</h2>
+    <p class="text-lg md:text-xl mt-3 text-gray-700">Fiestas Patrias</p>
+  </section>
 
+  <!-- Banner fijos: lo que esta abajo del color meado -->
+  <section class="max-w-7xl mx-auto my-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div class="bg-white shadow-md p-6 rounded hover:shadow-lg transition">
+      <img src="#" alt="#" class="h-12 mx-auto mb-3">
+      <h3 class="font-bold text-gray-800">TRANSPARENCIA ACTIVA</h3>
+    </div>
+    <div class="bg-white shadow-md p-6 rounded hover:shadow-lg transition">
+      <img src="#" alt="#" class="h-12 mx-auto mb-3">
+      <h3 class="font-bold text-gray-800">SOLICITUD DE INFORMACIÓN</h3>
+    </div>
+    <div class="bg-white shadow-md p-6 rounded hover:shadow-lg transition">
+      <img src="#" alt="#" class="h-12 mx-auto mb-3">
+      <h3 class="font-bold text-gray-800">Elecciones Organizaciones Comunitarias</h3>
+    </div>
+    <div class="bg-white shadow-md p-6 rounded hover:shadow-lg transition">
+      <img src="#" alt="#" class="h-12 mx-auto mb-3">
+      <h3 class="font-bold text-gray-800">Plataforma Ley del Lobby</h3>
+    </div>
+  </section>
+
+  <!-- lo que muestra de sibe.html y noticias.html -->
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
+    <app-sidebar></app-sidebar>
+    <app-noticias class="flex-1"></app-noticias>
+  </div>
+
+</main>
 <app-footer></app-footer>
