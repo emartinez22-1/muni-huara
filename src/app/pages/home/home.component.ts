@@ -12,10 +12,10 @@ import { FooterComponent } from '../../components/footer/footer.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   imports: [
-    NavbarComponent,
+
     NoticiasComponent,
     SidebarComponent,
-    FooterComponent
+ 
   ]
 })
 export class HomeComponent {}

@@ -1,4 +1,5 @@
 <header class="relative w-full">
+  <!-- Banner -->
   <div class="bg-cover bg-center h-48 flex items-center justify-center"
        style="background-image: url('assets/home/inicio1.jpg');">
     <h1 class="text-3xl md:text-4xl font-bold text-white drop-shadow-lg text-center">
@@ -6,15 +7,51 @@
     </h1>
   </div>
 
+  <!-- Estilos del botón -->
+  <style>
+    .btn {
+      padding: 0.25rem 0.4rem; /* px-2 py-1 */
+      border-radius: 0.55rem;  /* rounded */
+      transition: all 0.2s ease-in-out; /* transition */
+    }
+    .btn:hover {
+      color: #93c5fd;
+      border: 2px solid #93c5fd;
+      background-color: rgba(0, 0, 255, 0.162);
+    }
+  </style>
+
+  <!-- Navbar -->
   <nav class="bg-white shadow-md -mt-6 relative z-10">
-    <div class="max-w-7xl mx-auto px-4">
-      <ul class="flex flex-wrap justify-center gap-6 py-3 font-medium text-gray-700">
-        <li><a href="#" class="hover:text-blue-700">ORDENANZAS MUNICIPALES</a></li>
-        <li><a href="#" class="hover:text-blue-700">MUNICIPALIDAD</a></li>
-        <li><a href="#" class="hover:text-blue-700">CONCEJO MUNICIPAL</a></li>
-        <li><a href="#" class="hover:text-blue-700">LEY TRANSPARENCIA</a></li>
-        <li><a href="#" class="hover:text-blue-700">FIESTA SAN LORENZO 2025</a></li>
-      </ul>
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between py-3">
+    
+
+      <!-- Botón hamburguesa -->
+      <button type="button"
+              class="md:hidden p-2 rounded border border-gray-400 focus:outline-none"
+              aria-controls="menu"
+              [attr.aria-expanded]="isMenuOpen"
+              (click)="toggleMenu()"
+              (keyup.escape)="isMenuOpen = false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú -->
+    <div id="menu"
+         class="flex-col md:flex md:flex-row md:justify-center gap-6 font-medium text-gray-700 px-4 md:px-0 pb-4 md:pb-0"
+         [class.hidden]="!isMenuOpen">
+      <a href="#" class="btn">ORDENANZAS MUNICIPALES</a>
+      <a href="#" class="btn">MUNICIPALIDAD</a>
+      <a href="#" class="btn">CONCEJO MUNICIPAL</a>
+      <a href="#" class="btn">LEY TRANSPARENCIA</a>
+      <a href="#" class="btn">FIESTA SAN LORENZO 2025</a>
+      <a routerLink="/home" routerLinkActive="text-blue-400 font-semibold border border-blue-400" class="btn">Inicio</a>
+      <a routerLink="/contacto" routerLinkActive="text-blue-400 font-semibold border border-blue-400" class="btn">Contacto</a>
     </div>
   </nav>
 </header>
