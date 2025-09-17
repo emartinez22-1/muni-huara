@@ -1,26 +1,191 @@
-<footer class="bg-blue-900 text-white p-6 mt-8">
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<footer>
+  <div class="footer-container">
+    
+    <!-- Logo y descripción -->
+    <div class="footer-box">
+      <img src="assets/logo.png" alt="Logo Municipalidad" class="footer-logo">
+      <p>
+        Ilustre Municipalidad de Huara<br>
+        Trabajando por el desarrollo y bienestar de nuestra comunidad.
+      </p>
+    </div>
 
-    <div>
-      <h4 class="font-bold">La Municipalidad</h4>
-      <ul class="mt-2 space-y-1">
+    <!-- Contacto -->
+    <div class="footer-box">
+      <h3>Contacto</h3>
+      <ul>
+        <li><strong>Teléfono:</strong> +56 572463200</li>
+
+        <li><strong>Horario:</strong> Lunes a Viernes, 8:30 - 17:18 hrs</li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Municipalidad</h3>
+      <ul>
         <li><a href="#" class="hover:text-yellow-300">Concejo Municipal</a></li>
         <li><a href="#" class="hover:text-yellow-300">Ordenanzas</a></li>
         <li><a href="#" class="hover:text-yellow-300">Concursos Públicos</a></li>
       </ul>
     </div>
 
-    <div>
-      <h4 class="font-bold">Servicios Municipales</h4>
-      <ul class="mt-2 space-y-1">
+
+    <div class="footer-box">
+      <h3>Servicios</h3>
+      <ul>
         <li><a href="#" class="hover:text-yellow-300">Participación Ciudadana</a></li>
         <li><a href="#" class="hover:text-yellow-300">Discapacidad</a></li>
         <li><a href="#" class="hover:text-yellow-300">Medio Ambiente</a></li>
       </ul>
     </div>
 
-  </div>
-  <p class="text-center mt-6 text-sm"> 2025 Ilustre Municipalidad</p>
+    <!-- Ubicación -->
+    <div class="footer-box">
+      <h3>Ubicación</h3>
+      <p>
+        Huara, Región de Tarapacá, Chile
+      </p>
+      <a href="https://maps.app.goo.gl/4PdH1yCoePoeC2uK9" target="_blank">Ver en Google Maps</a>
+    </div>
 
+      <!-- Redes sociales -->
+      <div class="footer-box">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <ul class="mg-social">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100064666692677&#038;locale=es_LA" target="_blank">
+                <span class="icon-soci facebook"><i class="fa-brands fa-facebook-f"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/IMHuara" target="_blank">
+                <span class="icon-soci x-twitter"><i class="fa-brands fa-x-twitter"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/im_huara/?hl=es" target="_blank">
+                <span class="icon-soci instagram"><i class="fa-brands fa-instagram"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@ilustremunicipalidaddehuara" target="_blank">
+                <span class="icon-soci youtube"><i class="fa-brands fa-youtube"></i></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+
+  
+
+  <div class="footer-bottom">
+    © 2025 Ilustre Municipalidad de Huara | Todos los derechos reservados
+  </div>
 </footer>
+
+
+
+
+<style>
+  footer {
+    background-color: #0a2c61; /* Azul institucional */
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px; /* Reducimos la separación */
+    max-width: 1550px; /* No tan ancho, así se ven más unidos */
+    margin: auto;
+    padding: 15px 10px; /* Menos padding */
+  }
+
+  .footer-box {
+    margin: 0; /* Quitamos espacios externos */
+    padding: 5px 0; /* Un poco de aire interno */
+  }
+
+  .footer-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #f1c40f; /* Amarillo para resaltar títulos */
+  }
+
+  .footer-box p, 
+  .footer-box li, 
+  .footer-box a {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #ddd;
+    text-decoration: none;
+  }
+
+  .footer-box a:hover {
+    color: #f1c40f;
+    text-decoration: underline;
+  }
+
+  .footer-logo {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .mg-social {
+  list-style: none;
+  display: flex;              /* horizontal */
+  gap: 15px;                  /* separación entre iconos */
+  padding: 0;
+  margin: 0;
+  }
+
+  .mg-social li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;                /* tamaño del círculo */
+    height: 40px;
+    border-radius: 50%;         /* círculos */
+    background-color: #061d3f;  /* fondo por defecto */
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .mg-social li a:hover {
+    background-color: #f1c40f;  /* amarillo al hover */
+    color: #0a2c61;             /* azul para contraste */
+  }
+
+  .icon-soci i {
+    pointer-events: none;
+  }
+
+
+  
+
+  .footer-bottom {
+    background-color: #061d3f;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+
+  /* Responsivo */
+  @media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(6, 1fr);
+
+  }
+    .social-links {
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
+</style>

@@ -16,7 +16,7 @@
     }
     .btn:hover {
       color: #93c5fd;
-      border: 2px solid #93c5fd;
+      border: solid #93c5fd;
       background-color: rgba(0, 0, 255, 0.162);
     }
   </style>
@@ -33,11 +33,10 @@
               [attr.aria-expanded]="isMenuOpen"
               (click)="toggleMenu()"
               (keyup.escape)="isMenuOpen = false">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+               </svg>
       </button>
     </div>
 
