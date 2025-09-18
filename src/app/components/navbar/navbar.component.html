@@ -18,17 +18,19 @@
 
       <!-- Links centrados en escritorio -->
       <div class="hidden md:flex flex-1 justify-center items-center gap-4 font-medium text-white">
-        <a href="#" class="nav-link">ORDENANZAS MUNICIPALES</a>
+        <a routerLink="/home" routerLinkActive="active" class="nav-link">Inicio</a>
         <span class="separator">|</span>
         <a href="#" class="nav-link">MUNICIPALIDAD</a>
         <span class="separator">|</span>
         <a href="#" class="nav-link">CONCEJO MUNICIPAL</a>
         <span class="separator">|</span>
-        <a href="#" class="nav-link">LEY TRANSPARENCIA</a>
-        <span class="separator">|</span>
-        <a href="#" class="nav-link text-red-400 font-semibold">FIESTA SAN LORENZO 2025</a>
-        <span class="separator">|</span>
-        <a routerLink="/home" routerLinkActive="active" class="nav-link">Inicio</a>
+      <select name="Documentos" id="Documentos" (change)="navegar($event)" class=" border rounded focus:ring-blue-500 focus:border-blue-500">
+        <option value="DOCUMENTOS" disabled selected>DOCUMENTOS  MUNICIPALES</option>
+        <option value="circulacion">PERMISOS DE CIRCULACION</option>
+        <option value="reuniones">REUNIONES C. MUNICIPAL</option>
+        <option value="san-lorenzo">ORDENANZAS SAN LORENZO</option>
+        <option value="ordenanzas-municipales">ORDENANZAS MUNICIPALES</option>
+      </select>        
         <span class="separator">|</span>
         <a routerLink="/contacto" routerLinkActive="active" class="nav-link">Contacto</a>
       </div>

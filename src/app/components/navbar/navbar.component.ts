@@ -24,6 +24,11 @@ export class NavbarComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  navegar(event: Event) {
+  const ruta = (event.target as HTMLSelectElement).value;
+  this.router.navigate([ruta]);
+}
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isScrolled = window.scrollY > 0;
