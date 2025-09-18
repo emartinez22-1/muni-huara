@@ -1,10 +1,15 @@
-<header class="relative w-full h-[500px] bg-cover bg-center" style="background-image: url('assets/home/huara_1.jpg');">
+<header class="relative w-full h-[500px] bg-cover bg-center bg-fixed" style="background-image: url('assets/home/huara_1.jpg');">
 
   <div class="absolute inset-0 bg-black/40"></div>
 
-  <nav class="absolute top-0 left-0 w-full z-20">
+  <nav
+    class="fixed top-0 left-0 w-full z-50 transition-colors duration-300"
+    [ngClass]="{
+      'bg-black/80 backdrop-blur-md shadow-md': isScrolled,
+      'bg-transparent': !isScrolled
+    }"
+  >
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      
       <div class="flex items-center gap-2">
         <img src="assets/icon/icono_huara.png" alt="Logo Municipalidad" class="h-12 w-auto">
       </div>
@@ -32,7 +37,7 @@
               (click)="toggleMenu()"
               (keyup.escape)="isMenuOpen = false">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
+            viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -40,8 +45,8 @@
     </div>
 
     <div id="menu"
-         class="md:hidden flex flex-col bg-black/80 text-white text-center gap-4 py-4"
-         [class.hidden]="!isMenuOpen">
+        class="md:hidden flex flex-col bg-black/80 text-white text-center gap-4 py-4"
+        [class.hidden]="!isMenuOpen">
       <a href="#" class="nav-link">ORDENANZAS MUNICIPALES</a>
       <a href="#" class="nav-link">MUNICIPALIDAD</a>
       <a href="#" class="nav-link">CONCEJO MUNICIPAL</a>
@@ -51,6 +56,7 @@
       <a routerLink="/contacto" class="nav-link">Contacto</a>
     </div>
   </nav>
+
 
   <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10">
     <h1 class="text-3xl md:text-5xl font-bold drop-shadow-lg">

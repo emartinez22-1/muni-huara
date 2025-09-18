@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router, NavigationEnd } from '@angular/router';
@@ -9,17 +9,23 @@ import { filter } from 'rxjs/operators';
   standalone: true,
   imports: [RouterLink, RouterLinkActive, CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
   isMenuOpen = false;
+  isScrolled = false;
+
+  constructor(private router: Router) {
+    this.router.events.pipe(filter(e => e instanceof NavigationEnd))
+      .subscribe(() => this.isMenuOpen = false);
+  }
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
-  constructor(private router: Router) {
-  this.router.events.pipe(filter(e => e instanceof NavigationEnd))
-    .subscribe(() => this.isMenuOpen = false);
-}
 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 0;
+  }
 }
-
