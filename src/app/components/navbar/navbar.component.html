@@ -1,7 +1,6 @@
 <header class="relative w-full h-[500px] bg-cover bg-center bg-fixed" style="background-image: url('assets/home/huara_1.jpg');">
   <div class="absolute inset-0 bg-black/40"></div>
 
-  <!-- Navbar -->
   <nav
     class="fixed top-0 left-0 w-full z-50 transition-colors duration-300"
     [ngClass]="{
@@ -11,12 +10,10 @@
   >
     <div class="flex items-center justify-between h-16 relative">
       
-      <!-- Logo pegado a la izquierda -->
       <div class="flex items-center pl-4 md:pl-6">
         <img src="assets/icon/icono_huara.png" alt="Logo Municipalidad" class="h-12 w-auto">
       </div>
 
-      <!-- Links centrados en escritorio -->
       <div class="hidden md:flex flex-1 justify-center items-center gap-4 font-medium text-white">
         <a routerLink="/home" routerLinkActive="active" class="nav-link">INICIO</a>
         <span class="separator">|</span>
@@ -65,7 +62,6 @@
     </div>
   </nav>
 
-  <!-- Texto central del header -->
   <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10">
     <h1 class="text-3xl md:text-5xl font-bold drop-shadow-lg">
       Ilustre Municipalidad de Huara
