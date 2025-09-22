@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-
-// Importamos los componentes hijos
-import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { NoticiasComponent } from '../../components/noticias/noticias.component';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
-import { FooterComponent } from '../../components/footer/footer.component';
+import { BannersComponent } from '../../components/banners/banners.component';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +9,9 @@ import { FooterComponent } from '../../components/footer/footer.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   imports: [
-
     NoticiasComponent,
     SidebarComponent,
- 
+    BannersComponent
   ]
 })
 export class HomeComponent {}

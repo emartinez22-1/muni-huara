@@ -1,64 +1,7 @@
 <main class="p-6">
-  <!-- Banner: lo que esta en grande color meado -->
-  <section class="relative bg-yellow-100 h-72 flex flex-col items-center justify-center text-center shadow-lg">
-    <h2 class="text-4xl md:text-5xl font-bold text-blue-900">imagen con algo</h2>
-    <p class="text-lg md:text-xl mt-3 text-gray-700">Fiestas Patrias</p>
-  </section>
 
-  <!-- Banner fijos: lo que esta abajo del color meado -->
-    <section class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+  <app-banners></app-banners>
 
-    <div class="bg-white shadow-md rounded-lg p-6 border-t-4 border-blue-500 hover:shadow-xl transition">
-      <div class="flex flex-col items-center text-center">
-        <div class="bg-blue-100 text-blue-600 p-3 rounded-full mb-4">
-          <span class="material-icons text-3xl">TA</span>
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">Transferencia Activa</h3>
-        <p class="text-gray-600 text-sm mt-2">
-          Realice aquí sus transferencias, seguro y sin riesgos.
-        </p>
-      </div>
-    </div>
-
-    <div class="bg-white shadow-md rounded-lg p-6 border-t-4 border-green-500 hover:shadow-xl transition">
-      <div class="flex flex-col items-center text-center">
-        <div class="bg-green-100 text-green-600 p-3 rounded-full mb-4">
-          <span class="material-icons text-3xl">SI</span>
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">Solicitud de Informacion</h3>
-        <p class="text-gray-600 text-sm mt-2">
-          Encuentre todos los trámites y servicios que ofrece el municipio en línea.
-        </p>
-      </div>
-    </div>
-
-    <div class="bg-white shadow-md rounded-lg p-6 border-t-4 border-orange-500 hover:shadow-xl transition">
-      <div class="flex flex-col items-center text-center">
-        <div class="bg-orange-100 text-orange-600 p-3 rounded-full mb-4">
-          <span class="material-icons text-3xl">EOC</span>
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">organizaciones comunitarias</h3>
-        <p class="text-gray-600 text-sm mt-2">
-          Revise las elecciones comunitarias realisadas por las organizaciones competentes.
-        </p>
-      </div>
-    </div>
-
-    <div class="bg-white shadow-md rounded-lg p-6 border-t-4 border-orange-500 hover:shadow-xl transition">
-      <div class="flex flex-col items-center text-center">
-        <div class="bg-orange-100 text-orange-600 p-3 rounded-full mb-4">
-          <span class="material-icons text-3xl">PLH</span>
-        </div>
-        <h3 class="text-lg font-bold text-gray-800">Plataforma ley del hobby</h3>
-        <p class="text-gray-600 text-sm mt-2">
-          nueva ley realisada por la intitusion de seguridad y bienestar.
-        </p>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- lo que muestra de sibe.html y noticias.html -->
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
     <app-sidebar></app-sidebar>
     <app-noticias class="flex-1"></app-noticias>
