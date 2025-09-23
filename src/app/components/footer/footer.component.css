@@ -1,0 +1,98 @@
+
+  footer {
+    background-color: #0a2c61; /* Azul institucional */
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px; /* Reducimos la separación */
+    max-width: 1550px; /* No tan ancho, así se ven más unidos */
+    margin: auto;
+    padding: 15px 10px; /* Menos padding */
+  }
+
+  .footer-box {
+    margin: 0; /* Quitamos espacios externos */
+    padding: 5px 0; /* Un poco de aire interno */
+  }
+
+  .footer-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #f1c40f; /* Amarillo para resaltar títulos */
+  }
+
+  .footer-box p, 
+  .footer-box li, 
+  .footer-box a {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #ddd;
+    text-decoration: none;
+  }
+
+  .footer-box a:hover {
+    color: #f1c40f;
+    text-decoration: underline;
+  }
+
+  .footer-logo {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .mg-social {
+  list-style: none;
+  display: flex;              /* horizontal */
+  gap: 15px;                  /* separación entre iconos */
+  padding: 0;
+  margin: 0;
+  }
+
+  .mg-social li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;                /* tamaño del círculo */
+    height: 40px;
+    border-radius: 50%;         /* círculos */
+    background-color: #061d3f;  /* fondo por defecto */
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .mg-social li a:hover {
+    background-color: #f1c40f;  /* amarillo al hover */
+    color: #0a2c61;             /* azul para contraste */
+  }
+
+  .icon-soci i {
+    pointer-events: none;
+  }
+
+
+  
+
+  .footer-bottom {
+    background-color: #061d3f;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+
+  /* Responsivo */
+  @media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(6, 1fr);
+
+  }
+    .social-links {
+      flex-direction: row;
+      gap: 15px;
+    }
+  }

@@ -1,0 +1,80 @@
+
+  .nav-link {
+    position: relative;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #f1c40f;
+    transition: width 0.3s ease-in-out;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  .nav-link:hover {
+    background: rgba(149, 237, 8, 0.15);
+    backdrop-filter: blur(6px);
+    border-radius: 6px;
+  }
+  .separator {
+    color: #ffffff66;
+    margin: 0 0.25rem;
+  }
+  .active {
+    font-weight: bold;
+    color: #f1c40f;
+  }
+
+  /* Estilo general para el select */
+#Documentos {
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Borde y fondo al pasar */
+#Documentos:hover {
+  background: rgba(149, 237, 8, 0.15);
+  border: 1px solid #f1c40f00;
+}
+
+/* Efecto focus (cuando se despliega) */
+#Documentos:focus {
+  outline: none;
+  border: 1px solid #f1c40f00;
+  box-shadow: 0 0 6px rgba(241, 196, 15, 0);
+}
+
+/* Estilos para las opciones */
+#Documentos option {
+  background: #0d1b2a;        /* color oscuro de fondo del menú desplegable */
+  color: white;               /* texto blanco */
+  padding: 0.4rem 0.6rem;
+  transition: background 0.2s;
+}
+
+/* Al pasar por cada opción */
+#Documentos option:hover {
+  background: #f1c40f;
+  color: #0d1b2a;
+  font-weight: bold;
+}
+
+/* Opción seleccionada */
+#Documentos option:checked {
+  background: #f1c40f;
+  color: #0d1b2a;
+  font-weight: bold;
+}

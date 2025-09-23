@@ -1,139 +1,10 @@
 <!-- lo que muestra de sibe.html y noticias.html----------------------------------------------------------------- -->
-     <style>
-    :root {
-      /* 🎨 Personaliza la marca aquí */
-      --brand-1: #0f766e;   /* principal */
-      --brand-2: #115e59;   /* acento oscuro */
-      --text-1: #0f172a;    /* texto principal */
-      --text-2: #334155;    /* texto secundario */
-      --bg: #f8fafc;        /* fondo página */
-      --card-bg: #1a086c;   /* fondo tarjeta */
-      --border: #e2e8f0;    /* bordes suaves */
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --text-1: #e5e7eb;
-        --text-2: #cbd5e1;
-        --bg: #0b1220;
-        --card-bg: #0e3281;
-        --border: #1f2937;
-      }
-    }
-
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(90rem 90rem at 10% -10%, #ffffff 0%, transparent 40%),
-                  radial-gradient(60rem 60rem at 110% -20%, #ffffff 0%, transparent 40%),
-                  #ffffffae;
-      color: #000000;
-    }
-
-    .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 32px 20px 56px;
-    }
-
-    header h1 {
-      margin: 0 0 6px;
-      font-size: clamp(24px, 3vw, 34px);
-      letter-spacing: -0.5px;
-    }
-
-    header p { margin: 0; color: #000000; }
-
-    .grid {
-      margin-top: 26px;
-      display: grid;
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-      gap: 18px;
-    }
-    @media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 960px) { .grid { grid-template-columns: repeat(3, 1fr); } }
-
-    /* 📇 Tarjeta */
-    .business-card {
-      background: #afd4de3e;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 8px 24px rgb(0, 0, 0);
-      transition: transform 200ms ease, box-shadow 200ms ease; 
-    }
-    .business-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(2, 6, 23, 0.12);
-    }
-
-    .card-top {
-      display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 14px;
-      align-items: center;
-      margin-bottom: 12px;
-      border-bottom: 1px dashed #e2e8f0;
-      padding-bottom: 12px;
-    }
-
-    .logo {
-      inline-size: 56px;
-      block-size: 56px;
-      border-radius: 12px;
-      background: conic-gradient(from 180deg at 50% 50%, #43ecde, #05867d);
-      display: grid; place-items: center;
-      color: rgb(0, 0, 0); font-weight: 700;
-    }
-    .logo span { font-size: 18px; }
-
-    .company {
-      display: flex; flex-direction: column;
-      gap: 4px;
-    }
-
-    .company .name {
-      font-weight: 700; letter-spacing: 0.3px;
-    }
-    .company .dept { color: #000000; font-size: 14px; }
-
-    .person {
-      margin: 12px 0 6px;
-    }
-    .person .fullname {
-      font-size: 18px; font-weight: 700;
-    }
-    .person .role {
-      color: #000000;;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-    }
-
-    .meta { display: grid; gap: 6px; }
-    .meta-row { display: grid; grid-template-columns: 20px 1fr; gap: 8px; align-items: center; }
-    .meta-row svg { inline-size: 20px; block-size: 20px; opacity: 0.9; }
-    .meta a { color: #000000; text-decoration: none; }
-    .meta a:hover { text-decoration: underline; }
-
-    /* 🖨 Estilos de impresión para cortar 9x5 cm */
-    @media print {
-      body { background: rgb(28, 14, 39); }
-      .wrap { max-width: none; padding: 0; }
-      header { display: none; }
-      .grid {
-        grid-template-columns: repeat(2, 9cm);
-        gap: 0.8cm;
-        margin: 1cm;
-      }
-      .business-card { width: 9cm; height: 5cm; padding: 0.6cm; }
-    }
-  </style>
+    
 <body>
   <div class="wrap">
     <header>
       <h1>Tarjetas de presentación</h1>
-      <p>Equipo</p>
+      <p>Concejales</p>
     </header>
 
     <section class="grid" aria-label="Listado de tarjetas">
@@ -155,7 +26,7 @@
           </div>
           <div class="meta-row" title="Correo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
-            <a href="mailto:maria.perez@miempresa.cl">lorenareginna2018@gmail.com</a>
+            <a href="mailto:lorenareginna2018@gmail.com">lorenareginna2018@gmail.com</a>
           </div>
 
         </div>
@@ -172,7 +43,7 @@
 
         <div class="meta">
           <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.89.32 1.76.59 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.11a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.6.59A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:+56987654321">+56 9 9932 3689</a></div>
+            <a href="tel:+56 9 9932 3689">+56 9 9932 3689</a></div>
           <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
             <a href="mailto:raulsegundouribe@gmail.com">raulsegundouribe@gmail.com</a></div>
         </div>
@@ -191,11 +62,11 @@
         <div class="meta">
           <div class="meta-row" title="Teléfono">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.89.32 1.76.59 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.11a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.6.59A2 2 0 0 1 22 16.92z"/></svg>
-            <a>+56 9 9932 3642</a>
+            <a href="tel:+56 9 9932 3642">+56 9 9932 3642</a>
           </div>
           <div class="meta-row" title="Correo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
-            <a href="mailto:maria.perez@miempresa.cl">concejalrelosimh@gmail.com </a>
+            <a href="mailto:concejalrelosimh@gmail.com">concejalrelosimh@gmail.com </a>
           </div>
 
         </div>
@@ -217,11 +88,11 @@
         <div class="meta">
           <div class="meta-row" title="Teléfono">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.89.32 1.76.59 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.11a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.6.59A2 2 0 0 1 22 16.92z"/></svg>
-            <a>+56 9 2377 4714</a>
+            <a href="tel:+56 9 2377 4714">+56 9 2377 4714</a>
           </div>
           <div class="meta-row" title="Correo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
-            <a href="mailto:maria.perez@miempresa.cl">ciedmundo@gmail.com </a>
+            <a href="mailto:ciedmundo@gmail.com ">ciedmundo@gmail.com </a>
           </div>
 
         </div>
@@ -242,11 +113,11 @@
         <div class="meta">
           <div class="meta-row" title="Teléfono">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.89.32 1.76.59 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.11a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.6.59A2 2 0 0 1 22 16.92z"/></svg>
-            <a>+56 9 2377 4723</a>
+            <a href="tel:+56 9 2377 4723">+56 9 2377 4723</a>
           </div>
           <div class="meta-row" title="Correo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
-            <a href="mailto:maria.perez@miempresa.cl">concejaljoaquinflores@gmail.com </a>
+            <a href="mailto:concejaljoaquinflores@gmail.com">concejaljoaquinflores@gmail.com </a>
           </div>
 
         </div>
@@ -266,11 +137,11 @@
         <div class="meta">
           <div class="meta-row" title="Teléfono">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.89.32 1.76.59 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.11a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.6.59A2 2 0 0 1 22 16.92z"/></svg>
-            <a>+56 9 2377 4705</a>
+            <a href="tel:+56 9 2377 4705">+56 9 2377 4705</a>
           </div>
           <div class="meta-row" title="Correo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
-            <a href="mailto:maria.perez@miempresa.cl">maribelmamani.concejalahuara@gmail.com</a>
+            <a href="mailto:maribelmamani.concejalahuara@gmail.com">maribelmamani.concejalahuara@gmail.com</a>
           </div>
 
         </div>

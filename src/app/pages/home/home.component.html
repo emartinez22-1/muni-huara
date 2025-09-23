@@ -7,4 +7,57 @@
     <app-noticias class="flex-1"></app-noticias>
   </div>
 
+  <div>
+
+  <form [formGroup]="form" (ngSubmit)="enviar()" novalidate class="form-card">
+
+  <h2 class="title">Contáctanos</h2>
+
+  <div class="field">
+    <label class="label" for="nombre">Nombre</label>
+    <input id="nombre" class="input"
+           [class.invalid]="(submitted || f.nombre.touched) && f.nombre.invalid"
+           formControlName="nombre" placeholder="Nombre" />
+    <small class="hint" *ngIf="(submitted || f.nombre.touched) && f.nombre.errors?.['required']">
+      El nombre es obligatorio
+    </small>
+    <small class="hint" *ngIf="(submitted || f.nombre.touched) && f.nombre.errors?.['minlength']">
+      Mínimo 2 caracteres
+    </small>
+  </div>
+
+  <div class="field">
+    <label class="label" for="email">Email</label>
+    <input id="email" class="input" type="email"
+           [class.invalid]="(submitted || f.email.touched) && f.email.invalid"
+           formControlName="email" placeholder="tucorreo@dominio.com" />
+    <small class="hint" *ngIf="(submitted || f.email.touched) && f.email.errors?.['required']">
+      El email es obligatorio
+    </small>
+    <small class="hint" *ngIf="(submitted || f.email.touched) && f.email.errors?.['email']">
+      Formato de email inválido
+    </small>
+  </div>
+
+  <div class="field">
+    <label class="label" for="mensaje">Mensaje</label>
+    <textarea id="mensaje" class="textarea" rows="4"
+              [class.invalid]="(submitted || f.mensaje.touched) && f.mensaje.invalid"
+              formControlName="mensaje" placeholder="Escribe tu mensaje"></textarea>
+    <small class="hint" *ngIf="(submitted || f.mensaje.touched) && f.mensaje.errors?.['required']">
+      El mensaje es obligatorio
+    </small>
+    <small class="hint" *ngIf="(submitted || f.mensaje.touched) && f.mensaje.errors?.['minlength']">
+      Mínimo 10 caracteres
+    </small>
+  </div>
+
+  <!-- Botón: solo dispara console.log al hacer submit -->
+  <button type="submit" class="btn">
+    Enviar
+  </button>
+
+</form>
+
+  </div>
 </main>
