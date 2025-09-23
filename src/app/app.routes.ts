@@ -45,6 +45,9 @@ export const routes: Routes = [
       import('./pages/ordenanzas-municipales/ordenanzas-municipales').then(m => m.OrdenanzasMunicipales ),
     title: 'Ordenanzas Municipales | Municipalidad de Huara'
   },
-
+  {path:'municipalidad',    loadComponent: () =>
+      import('./pages/municipalidad/municipalidad').then(m => m.Municipalidad ),
+    title: 'Municipalidad de Huara'
+  },
   { path: '**', redirectTo: 'home' },
 ];

@@ -17,7 +17,7 @@
       <div class="hidden md:flex flex-1 justify-center items-center gap-4 font-medium text-white">
         <a role="LINK" aria-label="LINK INICIO" routerLink="/home" routerLinkActive="active" class="nav-link">INICIO</a>
         <span class="separator">|</span>
-        <a role="LINK" href="#" class="nav-link">MUNICIPALIDAD</a>
+        <a role="LINK" routerLink="/municipalidad" class="nav-link">MUNICIPALIDAD</a>
         <span class="separator">|</span>
         <a  role="LINK" aria-label="CONTACTO CONCEJALES"routerLink="/contacto" routerLinkActive="active" class="nav-link">CONCEJALES</a>       
         <span class="separator">|</span>
@@ -50,7 +50,7 @@
         class="md:hidden flex flex-col bg-black/80 text-white text-center gap-4 py-4"
         [class.hidden]="!isMenuOpen">
         <a role="LINK" aria-label="LINK INICIO" routerLink="/home" routerLinkActive="active" class="nav-link">INICIO</a>
-        <a role="LINK" href="#" class="nav-link">MUNICIPALIDAD</a>
+        <a role="LINK" routerLink="/municipalidad" class="nav-link">MUNICIPALIDAD</a>
         <a  role="LINK" aria-label="CONTACTO CONCEJALES"routerLink="/contacto" routerLinkActive="active" class="nav-link">CONCEJALES</a>       
         <select role="Selector" aria-label="Selector Documentos" name="Documentos" id="Documentos" (change)="navegar($event)" class=" text-center bg-transparent text-zinc-50 rounded focus:ring-blue-500 focus:border-blue-500 focus:text-gray-800" >
           <option value="DOCUMENTOS" disabled selected>DOCUMENTOS  MUNICIPALES</option>
