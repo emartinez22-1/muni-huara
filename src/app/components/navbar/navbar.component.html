@@ -15,23 +15,23 @@
       </div>
 
       <div class="hidden md:flex flex-1 justify-center items-center gap-4 font-medium text-white">
-        <a routerLink="/home" routerLinkActive="active" class="nav-link">INICIO</a>
+        <a role="LINK" aria-label="LINK INICIO" routerLink="/home" routerLinkActive="active" class="nav-link">INICIO</a>
         <span class="separator">|</span>
-        <a href="#" class="nav-link">MUNICIPALIDAD</a>
+        <a role="LINK" href="#" class="nav-link">MUNICIPALIDAD</a>
         <span class="separator">|</span>
-        <a routerLink="/contacto" routerLinkActive="active" class="nav-link">CONCEJALES</a>       
+        <a  role="LINK" aria-label="CONTACTO CONCEJALES"routerLink="/contacto" routerLinkActive="active" class="nav-link">CONCEJALES</a>       
         <span class="separator">|</span>
-        <select name="Documentos" id="Documentos" (change)="navegar($event)" class=" bg-transparent text-zinc-50 rounded focus:ring-blue-500 focus:border-blue-500 focus:text-gray-800" >
+        <select role="Selector" aria-label="Selector Documentos" name="Documentos" id="Documentos" (change)="navegar($event)" class=" text-center bg-transparent text-zinc-50 rounded focus:ring-blue-500 focus:border-blue-500 focus:text-gray-800" >
           <option value="DOCUMENTOS" disabled selected>DOCUMENTOS  MUNICIPALES</option>
-          <option value="circulacion">PERMISOS DE CIRCULACION</option>
-          <option value="reuniones">REUNIONES C. MUNICIPAL</option>
-          <option value="san-lorenzo">ORDENANZAS SAN LORENZO</option>
-          <option value="ordenanzas-municipales">ORDENANZAS MUNICIPALES</option>
+          <option aria-label="DOCUMENTOS PERMISOS DE CIRCULACION" value="circulacion">PERMISOS DE CIRCULACION</option>
+          <option  aria-label="LINKS REUNIONES MUNICIPALES"value="reuniones">REUNIONES C. MUNICIPAL</option>
+          <option  aria-label="DOCUMENTO ORDENANZAS SAN LORENZO"value="san-lorenzo">ORDENANZAS SAN LORENZO</option>
+          <option  aria-label="DOCUMENTOS ORDENANZAS MUNICIPALES" value="ordenanzas-municipales">ORDENANZAS MUNICIPALES</option>
         </select> 
       </div>
 
       <!-- Botón menú móvil -->
-      <button type="button"
+      <button role="boton" type="button"
               class="md:hidden p-2 rounded border border-white/50 text-white mr-4"
               aria-controls="menu"
               [attr.aria-expanded]="isMenuOpen"
@@ -46,18 +46,18 @@
     </div>
 
     <!-- Menú móvil -->
-    <div id="menu"
+    <div  role="menu-hamburguesa" id="menu"
         class="md:hidden flex flex-col bg-black/80 text-white text-center gap-4 py-4"
         [class.hidden]="!isMenuOpen">
-        <a routerLink="/home" routerLinkActive="active" class="nav-link">INICIO</a>
-        <a href="#" class="nav-link">MUNICIPALIDAD</a>
-        <a routerLink="/contacto" routerLinkActive="active" class="nav-link">CONCEJALES</a>       
-        <select name="Documentos" id="Documentos" (change)="navegar($event)" class=" text-center bg-transparent text-zinc-50 rounded focus:ring-blue-500 focus:border-blue-500 focus:text-gray-800" >
+        <a role="LINK" aria-label="LINK INICIO" routerLink="/home" routerLinkActive="active" class="nav-link">INICIO</a>
+        <a role="LINK" href="#" class="nav-link">MUNICIPALIDAD</a>
+        <a  role="LINK" aria-label="CONTACTO CONCEJALES"routerLink="/contacto" routerLinkActive="active" class="nav-link">CONCEJALES</a>       
+        <select role="Selector" aria-label="Selector Documentos" name="Documentos" id="Documentos" (change)="navegar($event)" class=" text-center bg-transparent text-zinc-50 rounded focus:ring-blue-500 focus:border-blue-500 focus:text-gray-800" >
           <option value="DOCUMENTOS" disabled selected>DOCUMENTOS  MUNICIPALES</option>
-          <option value="circulacion">PERMISOS DE CIRCULACION</option>
-          <option value="reuniones">REUNIONES C. MUNICIPAL</option>
-          <option value="san-lorenzo">ORDENANZAS SAN LORENZO</option>
-          <option value="ordenanzas-municipales">ORDENANZAS MUNICIPALES</option>
+          <option aria-label="DOCUMENTOS PERMISOS DE CIRCULACION" value="circulacion">PERMISOS DE CIRCULACION</option>
+          <option  aria-label="LINKS REUNIONES MUNICIPALES"value="reuniones">REUNIONES C. MUNICIPAL</option>
+          <option  aria-label="DOCUMENTO ORDENANZAS SAN LORENZO"value="san-lorenzo">ORDENANZAS SAN LORENZO</option>
+          <option  aria-label="DOCUMENTOS ORDENANZAS MUNICIPALES" value="ordenanzas-municipales">ORDENANZAS MUNICIPALES</option>
         </select> 
     </div>
   </nav>

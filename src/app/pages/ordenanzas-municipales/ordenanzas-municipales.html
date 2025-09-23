@@ -1,15 +1,15 @@
 <body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6">
-  <div class=" bg-blue-600 rounded-lg space-y-2">
-    <h1 class="text-2xl text-gray-50"> ORDENANZAS MUNICIPALES</h1>
+  <div class=" bg-yellow-600 rounded-lg space-y-2">
+    <h1 class="text-2xl text-gray-50 sm:text-base md:text-lg"> PERMISOS DE CIRCULACION</h1>
   </div>
   <div class="h-8"></div>
   <div class="bg-white shadow-lg rounded-lg w-full  p-6 space-y-3">
 
     <!-- Selector de Año -->
     <div>
-      <label for="anio" class="block text-sm font-semibold text-gray-700 mb-2">AÑO</label>
+      <label for="anio" class="block text-sm font-semibold text-gray-700 mb-2 ">AÑO</label>
       <select id="anio" name="anio"
-        class="w-full p-2.5 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        class="w-full  p-2.5 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:p-1">
         <option disabled selected>-- Selecciona el año --</option>
         <option value="2023">2023</option>
         <option value="2024">2024</option>
@@ -19,17 +19,17 @@
 
     <!-- Vista Previa del Documento -->
     <div>
-      <h2 class="text-lg font-semibold text-gray-800 mb-2">VISTA PREVIA</h2>
+      <h2 class="text-lg font-semibold text-gray-800 mb-2 sm:text-base">VISTA PREVIA</h2>
       <div class="border border-gray-300 rounded-md overflow-hidden h-96 bg-gray-50 flex items-center justify-center">
-        <iframe id="visor-pdf" src="/assets/documento.pdf" class="w-full h-full" frameborder="0"></iframe>
+        <iframe id="visor-pdf" src="/assets/docs/DECRETO-1558-DE-2025-ORDENANZA-7-DE-2025.pdf" class="w-full h-full" frameborder="0"></iframe>
       </div>
     </div>
 
     <!-- Botón de Descarga -->
     <div class="flex justify-end">
-      <a href="/assets/documento.pdf" download
-        class="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+      <a href="/assets/docs/DECRETO-1558-DE-2025-ORDENANZA-7-DE-2025.pdf" download
+        class="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition ">
+        <svg class="w-5 h-5 mr-2 sm:h-3 sm:w-3" fill="none" stroke="currentColor" stroke-width="2"
           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round"
             d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
